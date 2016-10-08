@@ -1,0 +1,30 @@
+{
+  "name": "w-word",
+  "version": "0.0.1",
+  "description": "过滤敏感词模块",
+  "main": "index.js",
+  "author": "@meglad",
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "javascript",
+    "filter"
+  ],
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.2"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "istanbul cover --hook-run-in-context node_modules/mocha/bin/_mocha -- -R spec",
+    "mocha": "mocha -t 3000 -s 2000 test/test.js",
+    "time": "node test/test_time.js"
+  },
+  "bugs": {
+    "url": "https://github.com/meGlad/w-word/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:meglad/w-word.git"
+  }
+}
