@@ -1,6 +1,6 @@
 {
   "name": "w-word",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "过滤敏感词模块",
   "main": "index.js",
   "author": "@meglad",
