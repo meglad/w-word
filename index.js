@@ -32,7 +32,7 @@ function reg(text) {
   if (fileMD5 !== md5) {
     fileMD5 = md5;
     text = text.replace(/[,]|[，]|[ ]|[\r\n]|[\n]/gi, "|");
-    text = text.replace(/([\+]|[\?]|[\/])/gi, '\\$1');
+    text = text.replace(/(\+|\?|\/|\*|\.)/gi, '\\$1');
     text = switchWord.simple(text); // 转简体
     regexp = new RegExp(text, 'gi');
   }
@@ -57,7 +57,7 @@ function watch(path, timeout) {
   inited = true;
   handle(path, true);
 
-  setTimeout(function() {
+  setInterval(function() {
     handle(path);
   }, timeout || 10 * 60 * 1000);
 }
